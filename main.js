@@ -38,16 +38,23 @@ $$('.reveal').forEach(element=>{
 });
 const year=$('#year');if(year)year.textContent=new Date().getFullYear();
 
-const socialToast=$('#social-toast');
-let toastTimer;
-$$('.js-social-placeholder').forEach(button=>button.addEventListener('click',()=>{
-  const network=button.dataset.network||'Social-Media';
-  if(!socialToast)return;
-  socialToast.textContent=`Der korrekte ${network}-Account wird ergänzt.`;
-  socialToast.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer=setTimeout(()=>socialToast.classList.remove('show'),2800);
-}));
+const socialUrls={
+  Instagram:'https://www.instagram.com/kayi.haustechnik/',
+  TikTok:'https://www.tiktok.com/@kayi.haustechnik'
+};
+$$('.js-social-placeholder').forEach(button=>{
+  const network=button.dataset.network;
+  const url=socialUrls[network];
+  if(!url)return;
+  const link=document.createElement('a');
+  link.href=url;
+  link.target='_blank';
+  link.rel='noopener noreferrer';
+  link.className=button.className.replace(/\bjs-social-placeholder\b/g,'').trim();
+  link.innerHTML=button.innerHTML;
+  link.setAttribute('aria-label',`${network} öffnen`);
+  button.replaceWith(link);
+});
 
 const dialog=$('#assistant-dialog');
 const assistantBody=$('#assistant-body');
