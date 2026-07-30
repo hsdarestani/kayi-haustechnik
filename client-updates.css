@@ -3,18 +3,20 @@ html,body{width:100%;max-width:100%;overflow-x:hidden!important;overflow-x:clip!
 /* Client visual feedback – corrected selectors, 2026-07-30 */
 @media (min-width:801px){
   .site-header .nav.container{height:112px!important}
-  .site-header .official-brand{gap:16px!important;transform:translateY(9px)!important}
-  .site-header .official-logo-symbol{width:78px!important;height:70px!important}
-  .site-header .official-logo-copy strong{font-size:25px!important}
-  .site-header .official-logo-copy b{font-size:20px!important}
-  .site-header .official-logo-copy small{font-size:9px!important}
-  .site-header.scrolled .nav.container{height:94px!important}
-  .site-header.scrolled .official-brand{transform:translateY(6px)!important}
-  .site-header.scrolled .official-logo-symbol{width:70px!important;height:64px!important}
+  .site-header .official-brand{gap:18px!important;align-items:center!important;transform:translateY(6px)!important}
+  .site-header .official-logo-symbol{width:74px!important;height:68px!important}
+  .site-header .official-logo-copy{display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:flex-start!important;line-height:1!important;transform:translateY(1px)!important}
+  .site-header .official-logo-copy strong{display:block!important;padding-left:0!important;margin:0 0 1px!important;font-size:25px!important;line-height:1!important;letter-spacing:.17em!important}
+  .site-header .official-logo-copy b{display:block!important;margin:0!important;font-size:21px!important;line-height:1!important;letter-spacing:.045em!important}
+  .site-header .official-logo-copy small{display:block!important;padding-left:0!important;margin-top:6px!important;font-size:8px!important;line-height:1!important;letter-spacing:.33em!important}
+  .site-header.scrolled .nav.container{height:96px!important}
+  .site-header.scrolled .official-brand{transform:translateY(4px)!important}
+  .site-header.scrolled .official-logo-symbol{width:66px!important;height:60px!important}
   .site-header.scrolled .official-logo-copy strong{font-size:23px!important}
-  .site-header.scrolled .official-logo-copy b{font-size:18px!important}
-  .site-header.scrolled .official-logo-copy small{font-size:8px!important}
+  .site-header.scrolled .official-logo-copy b{font-size:19px!important}
+  .site-header.scrolled .official-logo-copy small{font-size:7px!important;margin-top:5px!important}
 }
+.footer .official-brand{gap:15px!important;align-items:center!important}.footer .official-logo-copy{display:flex!important;flex-direction:column!important;align-items:flex-start!important;line-height:1!important}.footer .official-logo-copy strong{padding-left:0!important;margin:0 0 1px!important;letter-spacing:.15em!important}.footer .official-logo-copy b{margin:0!important;letter-spacing:.04em!important}.footer .official-logo-copy small{padding-left:0!important;margin-top:5px!important;letter-spacing:.28em!important}
 .project-chip.chip-top{right:48px!important}
 .project-chip.chip-bottom{left:48px!important}
 .visual-image,.image-two{background-position:18% center!important}
