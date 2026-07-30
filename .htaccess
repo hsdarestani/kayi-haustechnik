@@ -1,0 +1,19 @@
+Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteRule ^impressum/?$ impressum.html [L]
+RewriteRule ^datenschutz/?$ datenschutz.html [L]
+
+<FilesMatch "^\.(?!well-known)">
+  Require all denied
+</FilesMatch>
+
+<Files "lead.php">
+  <LimitExcept POST>
+    Require all denied
+  </LimitExcept>
+</Files>
